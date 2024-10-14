@@ -186,31 +186,11 @@
 				>
 			</File>
 			<File
-				RelativePath=".\crvcolor.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\crvgeomtry.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\crvhistogram.cpp"
-				>
-			</File>
-			<File
 				RelativePath=".\crvimage.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\crvmisc.cpp"
-				>
-			</File>
-			<File
 				RelativePath=".\crvnormroi.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\crvskindetection.cpp"
 				>
 			</File>
 			<File
@@ -239,31 +219,11 @@
 				>
 			</File>
 			<File
-				RelativePath=".\crvcolor.h"
-				>
-			</File>
-			<File
-				RelativePath=".\crvgeomtry.h"
-				>
-			</File>
-			<File
-				RelativePath=".\crvhistogram.h"
-				>
-			</File>
-			<File
 				RelativePath=".\crvimage.h"
 				>
 			</File>
 			<File
-				RelativePath=".\crvmisc.h"
-				>
-			</File>
-			<File
 				RelativePath=".\crvnormroi.h"
-				>
-			</File>
-			<File
-				RelativePath=".\crvskindetection.h"
 				>
 			</File>
 			<File
