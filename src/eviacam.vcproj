@@ -18,7 +18,7 @@
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="$(SolutionDir)$(ConfigurationName)\bin"
+			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(SolutionDir)$(ConfigurationName)\evicam"
 			ConfigurationType="1"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
@@ -45,7 +45,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="&quot;$(WXPATH)\lib\vc_x64_lib\mswud&quot;;&quot;$(WXPATH)\include&quot;;&quot;$(CVPATH)\build&quot;;&quot;$(CVPATH)\include&quot;;&quot;$(CVPATH)\include\opencv&quot;;&quot;$(CVPATH)\modules\core\include&quot;;&quot;$(CVPATH)\modules\imgproc\include&quot;;&quot;$(CVPATH)\modules\features2d\include&quot;;&quot;$(CVPATH)\modules\objdetect\include&quot;;&quot;$(CVPATH)\modules\video\include&quot;;&quot;$(CVPATH)\modules\highgui\include&quot;;&quot;$(CVPATH)\modules\ml\include&quot;;&quot;$(CVPATH)\modules\contrib\include&quot;;&quot;$(CVPATH)\modules\flann\include&quot;;&quot;$(CVPATH)\modules\gpu\include&quot;;&quot;$(CVPATH)\modules\calib3d\include&quot;;..\wxutil;..\wxcamwindow;..\creavision;..\simplelog;$(NOINHERIT)"
+				AdditionalIncludeDirectories="&quot;$(WXWIN)\lib\vc_x64_lib\mswud&quot;;&quot;$(WXWIN)\include&quot;;&quot;$(CVPATH)\build&quot;;&quot;$(CVPATH)\include&quot;;&quot;$(CVPATH)\include\opencv&quot;;&quot;$(CVPATH)\modules\core\include&quot;;&quot;$(CVPATH)\modules\imgproc\include&quot;;&quot;$(CVPATH)\modules\features2d\include&quot;;&quot;$(CVPATH)\modules\objdetect\include&quot;;&quot;$(CVPATH)\modules\video\include&quot;;&quot;$(CVPATH)\modules\highgui\include&quot;;&quot;$(CVPATH)\modules\ml\include&quot;;&quot;$(CVPATH)\modules\contrib\include&quot;;&quot;$(CVPATH)\modules\flann\include&quot;;&quot;$(CVPATH)\modules\gpu\include&quot;;&quot;$(CVPATH)\modules\calib3d\include&quot;;..\wxutil;..\wxcamwindow;..\creavision;..\simplelog;$(NOINHERIT)"
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;NOPCH;__WXMSW__;__WXDEBUG__"
 				MinimalRebuild="false"
 				BasicRuntimeChecks="3"
@@ -61,7 +61,7 @@
 			/>
 			<Tool
 				Name="VCResourceCompilerTool"
-				AdditionalIncludeDirectories="$(WXPATH)\include"
+				AdditionalIncludeDirectories="$(WXWIN)\include"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -73,7 +73,7 @@
 				OutputFile="$(OutDir)/eviacam.exe"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
-				AdditionalLibraryDirectories="&quot;$(CVPATH)\build\lib&quot;;&quot;$(WXPATH)\lib\vc_x64_lib&quot;;&quot;$(SolutionDir)$(ConfigurationName)&quot;"
+				AdditionalLibraryDirectories="&quot;$(CVPATH)\build\lib&quot;;&quot;$(WXWIN)\lib\vc_x64_lib&quot;;&quot;$(SolutionDir)$(ConfigurationName)&quot;"
 				UACExecutionLevel="0"
 				UACUIAccess="false"
 				IgnoreAllDefaultLibraries="false"
@@ -110,7 +110,7 @@
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="$(SolutionDir)$(ConfigurationName)\bin"
+			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(SolutionDir)$(ConfigurationName)\evicam"
 			ConfigurationType="1"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
@@ -134,7 +134,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="&quot;$(WXPATH)\lib\vc_x64_lib\mswu&quot;;&quot;$(WXPATH)\include&quot;;&quot;$(CVPATH)\build&quot;;&quot;$(CVPATH)\include&quot;;&quot;$(CVPATH)\include\opencv&quot;;&quot;$(CVPATH)\modules\core\include&quot;;&quot;$(CVPATH)\modules\imgproc\include&quot;;&quot;$(CVPATH)\modules\features2d\include&quot;;&quot;$(CVPATH)\modules\objdetect\include&quot;;&quot;$(CVPATH)\modules\video\include&quot;;&quot;$(CVPATH)\modules\highgui\include&quot;;&quot;$(CVPATH)\modules\ml\include&quot;;&quot;$(CVPATH)\modules\contrib\include&quot;;&quot;$(CVPATH)\modules\flann\include&quot;;&quot;$(CVPATH)\modules\gpu\include&quot;;&quot;$(CVPATH)\modules\calib3d\include&quot;;..\creavision;..\wxcamwindow;..\wxutil;..\simplelog;$(NOINHERIT)"
+				AdditionalIncludeDirectories="&quot;$(WXWIN)\lib\vc_x64_lib\mswu&quot;;&quot;$(WXWIN)\include&quot;;&quot;$(CVPATH)\build&quot;;&quot;$(CVPATH)\include&quot;;&quot;$(CVPATH)\include\opencv&quot;;&quot;$(CVPATH)\modules\core\include&quot;;&quot;$(CVPATH)\modules\imgproc\include&quot;;&quot;$(CVPATH)\modules\features2d\include&quot;;&quot;$(CVPATH)\modules\objdetect\include&quot;;&quot;$(CVPATH)\modules\video\include&quot;;&quot;$(CVPATH)\modules\highgui\include&quot;;&quot;$(CVPATH)\modules\ml\include&quot;;&quot;$(CVPATH)\modules\contrib\include&quot;;&quot;$(CVPATH)\modules\flann\include&quot;;&quot;$(CVPATH)\modules\gpu\include&quot;;&quot;$(CVPATH)\modules\calib3d\include&quot;;..\creavision;..\wxcamwindow;..\wxutil;..\simplelog;$(NOINHERIT)"
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;NOPCH;__WXMSW__"
 				StringPooling="true"
 				RuntimeLibrary="2"
@@ -149,7 +149,7 @@
 			/>
 			<Tool
 				Name="VCResourceCompilerTool"
-				AdditionalIncludeDirectories="$(WXPATH)\include"
+				AdditionalIncludeDirectories="$(WXWIN)\include"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -160,7 +160,7 @@
 				AdditionalDependencies="wxmsw28u_richtext.lib wxmsw28u_aui.lib wxmsw28u_core.lib wxbase28u.lib wxtiff.lib wxjpeg.lib wxpng.lib wxzlib.lib wxregexu.lib wxmsw28u_adv.lib wxmsw28u_html.lib wxmsw28u_xrc.lib wxbase28u_net.lib wxbase28u_xml.lib wxexpat.lib opencv_core220.lib opencv_imgproc220.lib opencv_objdetect220.lib opencv_video220.lib opencv_highgui220.lib kernel32.lib user32.lib gdi32.lib comdlg32.lib winspool.lib winmm.lib shell32.lib comctl32.lib ole32.lib oleaut32.lib uuid.lib rpcrt4.lib advapi32.lib wsock32.lib strmiids.lib simplelog.lib wxcamwindow.lib wxutil.lib"
 				OutputFile="$(OutDir)/eviacam.exe"
 				LinkIncremental="1"
-				AdditionalLibraryDirectories="&quot;$(CVPATH)\build\lib&quot;;&quot;$(WXPATH)\lib\vc_x64_lib&quot;;&quot;$(SolutionDir)$(ConfigurationName)&quot;"
+				AdditionalLibraryDirectories="&quot;$(CVPATH)\build\lib&quot;;&quot;$(WXWIN)\lib\vc_x64_lib&quot;;&quot;$(SolutionDir)$(ConfigurationName)&quot;"
 				UACExecutionLevel="2"
 				UACUIAccess="false"
 				GenerateDebugInformation="false"

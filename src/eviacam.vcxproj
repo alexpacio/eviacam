@@ -81,7 +81,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ExtensionsToDeleteOnClean>*.dll%3b*.obj%3b*.ilk%3b*.pdb%3b*.tlb%3b*.tli%3b*.tlh%3b*.tmp%3b*.rsp%3b*.bat%3b$(TargetPath)</ExtensionsToDeleteOnClean>
     <LinkIncremental>false</LinkIncremental>
-    <LibraryPath>$(WXPATH)\lib\vc_x64_lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+    <LibraryPath>$(WXWIN)\lib\vc_x64_lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
     <OutDir>$(SolutionDir)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)\$(Configuration)\eviacam\</IntDir>
   </PropertyGroup>
@@ -101,7 +101,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\;..\simplelog;..\creavision;..\wxcamwindow;..\wxutil;$(WXPATH)\lib\vc_x64_lib\mswud;$(WXPATH)\include;$(CVPATH)\build\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\;..\simplelog;..\creavision;..\wxcamwindow;..\wxutil;$(WXWIN)\lib\vc_x64_lib\mswud;$(WXWIN)\include;$(CVPATH)\build\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;NOPCH;__WXMSW__;__WXDEBUG__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -113,7 +113,7 @@
       <CallingConvention>Cdecl</CallingConvention>
     </ClCompile>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>$(WXPATH)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(WXWIN)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <PreLinkEvent>
       <Command>mkdir $(TargetDir)ca
@@ -178,7 +178,7 @@ if %ERRORLEVEL% LEQ 1 exit 0
       <AdditionalDependencies>wxmsw32ud_richtext.lib;wxmsw32ud_aui.lib;wxmsw32ud_core.lib;wxbase32ud.lib;wxtiffd.lib;wxjpegd.lib;wxpngd.lib;wxzlibd.lib;wxregexud.lib;wxmsw32ud_adv.lib;wxmsw32ud_html.lib;wxmsw32ud_xrc.lib;wxbase32ud_net.lib;wxbase32ud_xml.lib;opencv_world4100d.lib;wxexpatd.lib;comctl32.lib;rpcrt4.lib;winmm.lib;simplelog.lib;wxcamwindow.lib;wxutil.lib;strmiids.lib;uuid.lib;quartz.lib;wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)eviacam.exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>$(CVPATH)\build\x86\vc12\lib;$(WXPATH)\lib\vc_x64_lib;$(DSHOW_SAMPLES)\multimedia\baseclasses\$(Configuration);$(SolutionDir)$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(CVPATH)\build\x86\vc12\lib;$(WXWIN)\lib\vc_x64_lib;$(DSHOW_SAMPLES)\multimedia\baseclasses\$(Configuration);$(SolutionDir)$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <UACExecutionLevel>AsInvoker</UACExecutionLevel>
       <UACUIAccess>false</UACUIAccess>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
@@ -204,7 +204,7 @@ if not exist $(TargetDir)haarcascade_frontalface_default.xml copy "$(CVPATH)\sou
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\;..\simplelog;..\creavision;..\wxcamwindow;..\wxutil;$(WXPATH)\lib\vc_x64_lib\mswud;$(WXPATH)\include;$(CVPATH)\build\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\;..\simplelog;..\creavision;..\wxcamwindow;..\wxutil;$(WXWIN)\lib\vc_x64_lib\mswud;$(WXWIN)\include;$(CVPATH)\build\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;NOPCH;__WXMSW__;__WXDEBUG__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -217,7 +217,7 @@ if not exist $(TargetDir)haarcascade_frontalface_default.xml copy "$(CVPATH)\sou
       <CallingConvention>Cdecl</CallingConvention>
     </ClCompile>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>$(WXPATH)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(WXWIN)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <PreLinkEvent>
       <Command>mkdir $(TargetDir)ca
@@ -282,7 +282,7 @@ if %ERRORLEVEL% LEQ 1 exit 0
       <AdditionalDependencies>wxmsw32ud_richtext.lib;wxmsw32ud_aui.lib;wxmsw32ud_core.lib;wxbase32ud.lib;wxtiffd.lib;wxjpegd.lib;wxpngd.lib;wxzlibd.lib;wxregexud.lib;wxmsw32ud_adv.lib;wxmsw32ud_html.lib;wxmsw32ud_xrc.lib;wxbase32ud_net.lib;wxbase32ud_xml.lib;opencv_world4100d.lib;wxexpatd.lib;comctl32.lib;rpcrt4.lib;winmm.lib;simplelog.lib;wxcamwindow.lib;wxutil.lib;strmiids.lib;uuid.lib;quartz.lib;wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)eviacam.exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>$(CVPATH)\build\x86\vc12\lib;$(WXPATH)\lib\vc_x64_lib;$(DSHOW_SAMPLES)\multimedia\baseclasses\$(Configuration);$(SolutionDir)$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(CVPATH)\build\x86\vc12\lib;$(WXWIN)\lib\vc_x64_lib;$(DSHOW_SAMPLES)\multimedia\baseclasses\$(Configuration);$(SolutionDir)$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <UACExecutionLevel>AsInvoker</UACExecutionLevel>
       <UACUIAccess>false</UACUIAccess>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
@@ -308,7 +308,7 @@ if not exist $(TargetDir)haarcascade_frontalface_default.xml copy "$(CVPATH)\sou
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(WXPATH)\include\msvc;$(WXPATH)\include;..\;..\simplelog;..\creavision;..\wxcamwindow;..\wxutil;$(CVPATH)\build\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(WXWIN)\include\msvc;$(WXWIN)\include;..\;..\simplelog;..\creavision;..\wxcamwindow;..\wxutil;$(CVPATH)\build\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;NOPCH;__WXMSW__;__WXDEBUG__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -321,7 +321,7 @@ if not exist $(TargetDir)haarcascade_frontalface_default.xml copy "$(CVPATH)\sou
       <CallingConvention>Cdecl</CallingConvention>
     </ClCompile>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>$(WXPATH)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(WXWIN)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <PreLinkEvent>
       <Command>mkdir $(TargetDir)ca
@@ -411,7 +411,7 @@ if not exist $(TargetDir)haarcascade_frontalface_default.xml copy "$(CVPATH)\sou
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(WXPATH)\include;$(WXPATH)\include\msvc;..\;..\simplelog;..\creavision;..\wxcamwindow;..\wxutil;$(WXPATH)\lib\vc_x64_lib\mswu;$(CVPATH)\build\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(WXWIN)\include;$(WXWIN)\include\msvc;..\;..\simplelog;..\creavision;..\wxcamwindow;..\wxutil;$(WXWIN)\lib\vc_x64_lib\mswu;$(CVPATH)\build\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;NOPCH;__WXMSW__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -422,7 +422,7 @@ if not exist $(TargetDir)haarcascade_frontalface_default.xml copy "$(CVPATH)\sou
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>$(WXPATH)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(WXWIN)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <PreLinkEvent>
       <Command>mkdir $(TargetDir)ca
@@ -486,7 +486,7 @@ if %ERRORLEVEL% LEQ 1 exit 0
     <Link>
       <AdditionalDependencies>wxmsw32u_richtext.lib;wxmsw32u_aui.lib;wxmsw32u_core.lib;wxbase32u.lib;wxtiff.lib;wxjpeg.lib;wxpng.lib;wxzlib.lib;wxregexu.lib;wxmsw32u_adv.lib;wxmsw32u_html.lib;wxmsw32u_xrc.lib;wxbase32u_net.lib;wxbase32u_xml.lib;opencv_world4100.lib;wxexpat.lib;comctl32.lib;rpcrt4.lib;winmm.lib;simplelog.lib;wxcamwindow.lib;wxutil.lib;strmiids.lib;uuid.lib;quartz.lib;wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)eviacam.exe</OutputFile>
-      <AdditionalLibraryDirectories>$(WXPATH)\lib\vc_lib\lib\vc14x_x64_dll;$(CVPATH)\build\x64\vc16\bin;$(CVPATH)\build\x64\vc16\lib;$(WXPATH)\lib\vc_lib;$(DSHOW_SAMPLES)\multimedia\baseclasses\$(Configuration);$(SolutionDir)$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(WXWIN)\lib\vc_lib\lib\vc14x_x64_dll;$(CVPATH)\build\x64\vc16\bin;$(CVPATH)\build\x64\vc16\lib;$(WXWIN)\lib\vc_lib;$(DSHOW_SAMPLES)\multimedia\baseclasses\$(Configuration);$(SolutionDir)$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
       <UACUIAccess>false</UACUIAccess>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -511,7 +511,7 @@ if not exist $(TargetDir)haarcascade_frontalface_default.xml copy "$(CVPATH)\sou
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(WXPATH)\include;$(WXPATH)\include\msvc;..\;..\simplelog;..\creavision;..\wxcamwindow;..\wxutil;$(WXPATH)\lib\vc_x64_lib\mswu;$(CVPATH)\build\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(WXWIN)\include;$(WXWIN)\include\msvc;..\;..\simplelog;..\creavision;..\wxcamwindow;..\wxutil;$(WXWIN)\lib\vc_x64_lib\mswu;$(CVPATH)\build\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;NOPCH;__WXMSW__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -523,7 +523,7 @@ if not exist $(TargetDir)haarcascade_frontalface_default.xml copy "$(CVPATH)\sou
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>$(WXPATH)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(WXWIN)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <PreLinkEvent>
       <Command>mkdir $(TargetDir)ca
@@ -587,7 +587,7 @@ if %ERRORLEVEL% LEQ 1 exit 0
     <Link>
       <AdditionalDependencies>wxmsw32u_richtext.lib;wxmsw32u_aui.lib;wxmsw32u_core.lib;wxbase32u.lib;wxtiff.lib;wxjpeg.lib;wxpng.lib;wxzlib.lib;wxregexu.lib;wxmsw32u_adv.lib;wxmsw32u_html.lib;wxmsw32u_xrc.lib;wxbase32u_net.lib;wxbase32u_xml.lib;opencv_world4100.lib;wxexpat.lib;comctl32.lib;rpcrt4.lib;winmm.lib;simplelog.lib;wxcamwindow.lib;wxutil.lib;strmiids.lib;uuid.lib;quartz.lib;wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)eviacam.exe</OutputFile>
-      <AdditionalLibraryDirectories>$(WXPATH)\lib\vc_x64_lib\lib\vc14x_x64_dll;$(CVPATH)\build\x64\vc16\bin;$(CVPATH)\build\x64\vc16\lib;$(WXPATH)\lib\vc_x64_lib;$(DSHOW_SAMPLES)\multimedia\baseclasses\$(Configuration);$(SolutionDir)$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(WXWIN)\lib\vc_x64_lib\lib\vc14x_x64_dll;$(CVPATH)\build\x64\vc16\bin;$(CVPATH)\build\x64\vc16\lib;$(WXWIN)\lib\vc_x64_lib;$(DSHOW_SAMPLES)\multimedia\baseclasses\$(Configuration);$(SolutionDir)$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
       <UACUIAccess>false</UACUIAccess>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -612,7 +612,7 @@ if not exist $(TargetDir)haarcascade_frontalface_default.xml copy "$(CVPATH)\sou
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(WXPATH)\include\msvc;$(WXPATH)\include;..\;..\simplelog;..\creavision;..\wxcamwindow;..\wxutil;$(CVPATH)\build\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(WXWIN)\include\msvc;$(WXWIN)\include;..\;..\simplelog;..\creavision;..\wxcamwindow;..\wxutil;$(CVPATH)\build\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;NOPCH;__WXMSW__;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -624,7 +624,7 @@ if not exist $(TargetDir)haarcascade_frontalface_default.xml copy "$(CVPATH)\sou
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>$(WXPATH)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(WXWIN)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <PreLinkEvent>
       <Command>mkdir $(TargetDir)ca
