@@ -31,6 +31,10 @@
 #include "wx/wx.h"
 #endif
 
+#if defined(WIN32)
+#endif
+#include <windows.h>
+
 ////@begin includes
 ////@end includes
 #include <wx/tooltip.h>
@@ -70,6 +74,20 @@ IMPLEMENT_APP_NO_MAIN(EViacamApp)
 #include <mcheck.h>
 #endif
 int main(int argc, char *argv[]) {
+
+#if defined(WIN32)
+	// Get the handle to the current process
+    HANDLE hProcess = GetCurrentProcess();
+
+    // Set the process priority to real-time
+    if (!SetPriorityClass(hProcess, REALTIME_PRIORITY_CLASS))
+        std::cerr << "Failed to set process priority. Error: " << GetLastError() << std::endl;
+
+	if (hProcess != NULL )
+		CloseHandle( hProcess );
+
+#endif
+
 //printf( "XInitThreads - calling\n" );
 #ifndef NDEBUG
 //mtrace();

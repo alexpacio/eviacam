@@ -586,7 +586,6 @@ void WViacam::OnToolHelpClick( wxCommandEvent& event )
 		case (wxLANGUAGE_CATALAN):
 			path+= _T("/help/ca/help.hhp");
 			break;
-		case (wxLANGUAGE_SPANISH):
 		case (wxLANGUAGE_SPANISH_ARGENTINA):
 		case (wxLANGUAGE_SPANISH_BOLIVIA):
 		case (wxLANGUAGE_SPANISH_CHILE):
