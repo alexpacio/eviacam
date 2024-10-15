@@ -32,8 +32,8 @@
 #endif
 
 #if defined(WIN32)
-#endif
 #include <windows.h>
+#endif
 
 ////@begin includes
 ////@end includes
